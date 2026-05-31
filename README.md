@@ -1,36 +1,260 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PersonaLens
 
-## Getting Started
+## Adaptive Behavioral Intelligence Platform
 
-First, run the development server:
+PersonaLens is an AI-powered behavioral intelligence platform that dynamically analyzes how individuals think, decide, communicate, adapt, lead, and respond to real-world situations.
+
+Unlike traditional personality tests that rely on static questionnaires, PersonaLens uses an adaptive assessment engine powered by AI-driven behavioral analysis. The platform intelligently selects questions from a 500+ question behavioral dataset, continuously refining user profiles until confidence thresholds are achieved.
+
+The result is a comprehensive behavioral report that provides actionable insights into leadership, decision-making, emotional resilience, motivation, adaptability, creativity, social intelligence, and personal growth opportunities.
+
+---
+
+## Features
+
+### Adaptive Assessment Engine
+
+- Dynamic question selection
+- Confidence-based assessment flow
+- Behavioral trait calibration
+- Multi-format question support
+- Reduced assessment fatigue
+
+### Behavioral Profiling
+
+Analyze behavioral dimensions including:
+
+- Decision Making
+- Leadership
+- Emotional Resilience
+- Social Orientation
+- Motivation
+- Adaptability
+- Creativity & Innovation
+- Values & Identity
+- Behavioral Patterns
+- Self-Awareness
+
+### AI-Powered Insights
+
+- Google Gemini 2.5 Flash integration
+- Behavioral archetype generation
+- Strength identification
+- Growth opportunity analysis
+- Personalized behavioral summaries
+
+### Interactive Dashboard
+
+- Assessment history
+- Behavioral analytics
+- Report management
+- Visual trait tracking
+- Progress monitoring
+
+### Comprehensive Reports
+
+- Primary and secondary archetypes
+- Behavioral trait breakdowns
+- Confidence indicators
+- Visual analytics
+- Export-friendly layouts
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- Next.js 15 (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Recharts
+
+### Backend
+
+- Next.js API Routes
+- Supabase Authentication
+- Supabase Database
+- Google Gemini API
+
+### Database
+
+- Supabase PostgreSQL
+
+### Development Tools
+
+- ESLint
+- Turbopack
+- Git
+- GitHub
+
+---
+
+## Architecture
+
+```text
+User
+ │
+ ▼
+Adaptive Question Engine
+ │
+ ▼
+Response Collection
+ │
+ ▼
+Trait Scoring Engine
+ │
+ ▼
+Confidence Evaluation
+ │
+ ├── Additional Questions Required
+ │
+ └── Confidence Threshold Achieved
+             │
+             ▼
+      Gemini Analysis Engine
+             │
+             ▼
+      Behavioral Report Generation
+             │
+             ▼
+      Dashboard & Visualization
+```
+
+## Assessment Workflow
+
+1. User starts an assessment.
+2. Initial calibration questions are presented.
+3. Responses are evaluated by the adaptive trait engine.
+4. Confidence levels are calculated across behavioral dimensions.
+5. Additional questions are selected dynamically where confidence is low.
+6. Assessment concludes once confidence thresholds are met.
+7. Behavioral data is analyzed.
+8. Google Gemini generates personalized insights.
+9. A behavioral report is produced.
+10. Results are stored and displayed on the dashboard.
+
+---
+
+## Project Structure
+
+```text
+src/
+├── app/
+│   ├── auth/
+│   ├── assessment/
+│   ├── dashboard/
+│   ├── report/
+│   └── api/
+│
+├── components/
+│
+├── lib/
+│   ├── trait-engine.ts
+│   ├── adaptive-engine.ts
+│   ├── db.ts
+│   └── gemini.ts
+│
+├── data/
+│   └── questions/
+│
+├── hooks/
+│
+└── types/
+```
+
+---
+
+## Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
+
+NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/personalens.git
+
+cd personalens
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Application runs at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Local Development Mode
 
-To learn more about Next.js, take a look at the following resources:
+PersonaLens includes a LocalStorage fallback system.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If Supabase credentials are unavailable:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- User sessions work locally
+- Assessments are stored locally
+- Reports remain accessible
+- Full application testing is possible without external services
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Privacy & Ethics
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+PersonaLens is intended for behavioral insights and self-reflection.
+
+The platform:
+
+- Does not diagnose mental health conditions
+- Does not provide medical advice
+- Does not replace professional psychological evaluation
+- Presents results as behavioral tendencies rather than definitive conclusions
+
+---
+
+## Future Enhancements
+
+- Behavioral trend tracking
+- AI coaching assistant
+- Team compatibility assessments
+- Growth roadmap generation
+- Enterprise analytics
+- Mobile application
+- Multi-language support
+
+---
+
+## License
+
+This project is intended for educational, research, and portfolio purposes.
+
+---
+
+## Author
+
+Developed as an advanced AI-powered behavioral intelligence platform combining adaptive assessment systems, behavioral analytics, and generative AI to deliver personalized insights.
